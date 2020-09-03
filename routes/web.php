@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app', ['components' => 'displayProducts'], ['title' => 'Products']);
+    return view('home', ['title' => 'Home']);
 });
 
 Route::get('/orders', function () {
@@ -52,3 +52,5 @@ Route::post('products/delete/{id}', 'productsController@destroy');
 Route::get('/login', function () {
     return view('login', ['title' => 'Login']);
 });
+
+Route::get('/test','FirebaseController@index');
